@@ -19,7 +19,9 @@ jobs:
       - name: Run minimal repro matrix
         # 退出码 0 = 复现 (bug 存在, 预期状态)
         # 退出码 1 = 未复现 (上游已修复或环境变化 -> 本 job 变红提醒)
-        run: ./repro.sh
+        run: |
+        chmod +x ./repo.sh
+        ./repro.sh
 
       - name: Upload build logs
         if: always()
