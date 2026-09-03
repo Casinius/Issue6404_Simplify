@@ -22,6 +22,7 @@ jobs:
         run: |
           git clone https://github.com/Casinius/Issue6404_Simplify.git
           cd Issue6404_Simplify
+          ls ./
           chmod +x ./repo.sh
           ./repro.sh
 
