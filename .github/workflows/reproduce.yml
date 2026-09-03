@@ -1,0 +1,33 @@
+name: Reproduce xmake issue #6404 (minimal)
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  repro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xmake
+        run: |
+          curl -fsSL https://xmake.io/shget.text | bash
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          xmake --version
+
+      - name: Run minimal repro matrix
+        # 退出码 0 = 复现 (bug 存在, 预期状态)
+        # 退出码 1 = 未复现 (上游已修复或环境变化 -> 本 job 变红提醒)
+        run: ./repro.sh
+
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: repro-logs
+          path: |
+            variants/*/build1.log
+            variants/*/build2.log
+            variants/*/configure.log
+

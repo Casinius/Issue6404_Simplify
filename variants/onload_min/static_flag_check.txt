@@ -1,0 +1,1 @@
+  static-flag(-funroll-loops): build1=no build2=no

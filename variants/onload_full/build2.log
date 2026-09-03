@@ -1,0 +1,20 @@
+[ 23%]: <hello> cache compiling.releasedbg src/main.cpp
+/usr/bin/g++ -c -funroll-loops -DFOO6404 -DBAR6404 -ffunction-sections -DRVISA_X86 -DRVISA_64 -o build/.objs/hello/linux/x86_64/releasedbg/src/main.cpp.o src/main.cpp
+[ 47%]: <hello> linking.releasedbg hello
+/usr/bin/g++ -o build/linux/x86_64/releasedbg/hello build/.objs/hello/linux/x86_64/releasedbg/src/main.cpp.o -L/usr/bin/../lib
+
+build cache stats:
+cache directory: /home/cyan/ci/variants/onload_full/build/.build_cache
+cache hit rate: 100%
+cache hit: 1
+cache hit total time: 0.000s
+cache miss: 0
+cache miss total time: 0.000s
+new cached files: 0
+remote cache hit: 0
+remote new cached files: 0
+preprocess failed: 0
+compile fallback count: 0
+compile total time: 0.000s
+
+[100%]: build ok, spent 0.072s

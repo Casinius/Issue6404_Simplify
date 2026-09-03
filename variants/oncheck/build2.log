@@ -1,0 +1,31 @@
+checking for platform ... linux (x86_64)
+checking for gcc ... /usr/bin/gcc
+checking for Ascend SDK directory ... no
+checking for zig ... /home/cyan/.zvm/zig/zig
+checking for nim ... /home/cyan/.nimble/bin/nim
+checkinfo: cannot runv(dotnet --version), No such file or directory
+checking for dotnet ... no
+checking for .NET SDK directory ... no
+error: @programdir/core/main.lua:274: @programdir/core/sandbox/modules/import/core/base/task.lua:65: @programdir/modules/private/utils/target.lua:172: toolchain("fake-check"): not found!
+stack traceback:
+    [C]: in function 'error'
+    [@programdir/core/base/os.lua:1204]:
+    [@programdir/modules/private/utils/target.lua:172]: in function 'check_target_toolchains'
+    [@programdir/actions/config/main.lua:375]:
+    [C]: in function 'xpcall'
+    [@programdir/core/base/utils.lua:299]:
+    [@programdir/core/base/task.lua:566]: in function 'run'
+    [@programdir/core/sandbox/modules/import/core/base/task.lua:63]: in function 'run'
+    [@programdir/actions/build/main.lua:200]:
+    [C]: in function 'xpcall'
+    [@programdir/core/base/utils.lua:299]:
+    [@programdir/core/base/task.lua:566]: in function 'run'
+    [@programdir/core/main.lua:272]: in function 'cotask'
+    [@programdir/core/base/scheduler.lua:539]:
+
+stack traceback:
+	[C]: in global 'error'
+	@programdir/core/base/os.lua:1204: in function 'os.raiselevel'
+	(...tail calls...)
+	@programdir/core/main.lua:274: in upvalue 'cotask'
+	@programdir/core/base/scheduler.lua:539: in function <@programdir/core/base/scheduler.lua:532>

@@ -1,0 +1,7 @@
+{
+    cmdlines = {
+        "xmake build -vDr hello",
+        "xmake lua /home/cyan/.local/share/xmake/modules/private/utils/statistics.lua --diagnosis --verbose",
+        "xmake build -vDr hello"
+    }
+}

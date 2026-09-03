@@ -1,0 +1,10 @@
+{
+    recheck = false,
+    mtimes = {
+        ["xmake.lua"] = 1788429956
+    },
+    options = {
+        clean = true,
+        mode = "releasedbg"
+    }
+}

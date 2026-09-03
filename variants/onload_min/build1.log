@@ -1,0 +1,33 @@
+checking for g++ ... /usr/bin/g++
+checking for the c++ compiler (cxx) ... g++
+checking for /usr/bin/g++ ... ok
+checking for flags (-fPIC) ... ok
+> g++ "-fPIC" "-DFOO6404"
+[ 23%]: <hello> cache compiling.releasedbg src/main.cpp
+/usr/bin/g++ -c -DFOO6404 -o build/.objs/hello/linux/x86_64/releasedbg/src/main.cpp.o src/main.cpp
+checking for flags (-MMD -MF) ... ok
+> g++ "-MMD" "-MF" "/dev/null" "-DFOO6404"
+checking for flags (-Wno-gnu-line-marker -Werror) ... ok
+> g++ "-Wno-gnu-line-marker" "-Werror" "-DFOO6404"
+checking for g++ ... /usr/bin/g++
+checking for the linker (ld) ... g++
+checking for flags (-fPIC) ... ok
+> g++ "-fPIC"
+[ 47%]: <hello> linking.releasedbg hello
+/usr/bin/g++ -o build/linux/x86_64/releasedbg/hello build/.objs/hello/linux/x86_64/releasedbg/src/main.cpp.o
+
+build cache stats:
+cache directory: /home/cyan/ci/variants/onload_min/build/.build_cache
+cache hit rate: 0%
+cache hit: 0
+cache hit total time: 0.000s
+cache miss: 1
+cache miss total time: 0.000s
+new cached files: 1
+remote cache hit: 0
+remote new cached files: 0
+preprocess failed: 0
+compile fallback count: 0
+compile total time: 0.020s
+
+[100%]: build ok, spent 0.23s
