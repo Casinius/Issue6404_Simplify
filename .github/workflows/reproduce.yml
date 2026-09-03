@@ -24,7 +24,7 @@ jobs:
           cd Issue6404_Simplify
           ls ./
           chmod +x ./repo.sh
-          ./repro.sh
+          ./repo.sh
 
       - name: Upload build logs
         if: always()
