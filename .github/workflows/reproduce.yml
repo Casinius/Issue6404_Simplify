@@ -20,6 +20,8 @@ jobs:
         # 退出码 0 = 复现 (bug 存在, 预期状态)
         # 退出码 1 = 未复现 (上游已修复或环境变化 -> 本 job 变红提醒)
         run: |
+          git clone https://github.com/Casinius/Issue6404_Simplify.git
+          cd Issue6404_Simplify
           chmod +x ./repo.sh
           ./repro.sh
 
